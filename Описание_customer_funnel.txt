@@ -1,0 +1,71 @@
+----------------------------
+В папке Проекты/KidReeds создаем папку 6_CustomerFunnel
+Переносим из загрузок файл events_2023-07-28_2023-07-30.csv
+Делаем его укороченную копию из 30 строк для отладки events_exemp.csv
+В VSCode создаем файл customer_funnel.ipynb
+Переходим в терминале файла в 6_CustomerFunnel
+cd /путь к папке 6_CustomerFunnel
+
+Источник по работе с пандас https://pythonru.com/uroki/osnovy-pandas-1-chtenie-fajlov-dataframe-otbor-dannyh
+
+Внутри папки 6_CustomerFunnel создадем виртуальное окружение
+python3.8 -m venv venv
+source venv/bin/activate
+python --version
+
+Устанавливаем pandas
+pip install pandas
+pip install --upgrade pip
+
+Пишем код
+# import numpy as np
+import pandas as pd
+
+pd.read_csv('/Users/lemon/Desktop/Проекты/KidReeds/6_CustomerFunnel/events_exemp.csv', delimete=',')
+
+Запускаем, получаем ошибку
+ModuleNotFoundError: No module named 'pandas'
+
+В терминале файла пишем
+jupyter notebook
+
+В открывшемся окне jupyter открываем файл customer_funnel.ipynb
+Запускаем, все работает!
+
+Спрашиваем у ИИ:
+В датафрейме есть колонка event.
+Данные в этой колонке могут принимать значения из списка [a, b, c, d].
+Как получить словарь, ключи в котором значения из списка, а значения - сколько содержится записей в таблице датафрейм с заданным ключом из списка, с сортировкой по значениям словаря
+Работает!
+
+Вставляем в код реальный csv файл
+Работает!
+-----------------------------
+Выкладка в гитхаб 
+Терминал - в папке 6_CustomerFunnel 	
+git init .
+Создаем .gitignore
+nano .gitignore
+
+/venv
+events_exemp.csv
+
+		Ctrl + o и Enter сохранениеç
+		Ctrl + x и Y и Enter выход
+		выйти из редактора - напечатайте :qa и нажмите enter.
+cat .gitignore
+
+git add .
+git commit -m '1 commit'
+
+Гитхаб
+Создаем репозитарий 6_CustomerFunnel
+Терминал
+git remote add origin git@github.com:lemon1964/6_CustomerFunnel
+git branch -M main
+git push -u origin main
+
+https://github.com/lemon1964/6_CustomerFunnel
+
+
+
