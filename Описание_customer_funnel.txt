@@ -66,6 +66,18 @@ git branch -M main
 git push -u origin main
 
 https://github.com/lemon1964/6_CustomerFunnel
+--------------------------
+В VSCode открываем файл customer_funnel.ipynb
+Справа сверху - выбор ядра - выбираем Python 3.8 с Анакондой
+Видим, что - import pandas as pd - заработало - ОК
+Корректируем путь файла в датафрейме
+Проверяем, работает - ОК
+---------------
+Обновление в гитхаб
+git add .
+git commit -m '3 commit'
+git push -u origin main
+---------------
 
 
 
