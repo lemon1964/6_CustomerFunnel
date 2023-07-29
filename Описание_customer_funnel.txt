@@ -74,8 +74,15 @@ https://github.com/lemon1964/6_CustomerFunnel
 Проверяем, работает - ОК
 ---------------
 Обновление в гитхаб
+nano .gitignore
+
+/venv
+/.ipynb_checkpoints
+events_exemp.csv
+
+
 git add .
-git commit -m '3 commit'
+git commit -m '4 commit'
 git push -u origin main
 ---------------
 
